@@ -1,0 +1,8 @@
+## User settings
+xcuserdata/
+xcuserstate/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
