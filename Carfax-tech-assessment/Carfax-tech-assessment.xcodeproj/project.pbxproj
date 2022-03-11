@@ -10,7 +10,6 @@
 		11A62EC127DACF4B00005559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EC027DACF4B00005559 /* AppDelegate.swift */; };
 		11A62EC327DACF4B00005559 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EC227DACF4B00005559 /* SceneDelegate.swift */; };
 		11A62EC527DACF4B00005559 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EC427DACF4B00005559 /* ViewController.swift */; };
-		11A62EC827DACF4B00005559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A62EC627DACF4B00005559 /* Main.storyboard */; };
 		11A62ECA27DACF4B00005559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A62EC927DACF4B00005559 /* Assets.xcassets */; };
 		11A62ECD27DACF4B00005559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A62ECB27DACF4B00005559 /* LaunchScreen.storyboard */; };
 		11A62ED827DACF4C00005559 /* Carfax_tech_assessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62ED727DACF4C00005559 /* Carfax_tech_assessmentTests.swift */; };
@@ -40,7 +39,6 @@
 		11A62EC027DACF4B00005559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A62EC227DACF4B00005559 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		11A62EC427DACF4B00005559 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11A62EC727DACF4B00005559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11A62EC927DACF4B00005559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A62ECC27DACF4B00005559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11A62ECE27DACF4B00005559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				11A62EC027DACF4B00005559 /* AppDelegate.swift */,
 				11A62EC227DACF4B00005559 /* SceneDelegate.swift */,
 				11A62EC427DACF4B00005559 /* ViewController.swift */,
-				11A62EC627DACF4B00005559 /* Main.storyboard */,
 				11A62EC927DACF4B00005559 /* Assets.xcassets */,
 				11A62ECB27DACF4B00005559 /* LaunchScreen.storyboard */,
 				11A62ECE27DACF4B00005559 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				11A62ECD27DACF4B00005559 /* LaunchScreen.storyboard in Resources */,
 				11A62ECA27DACF4B00005559 /* Assets.xcassets in Resources */,
-				11A62EC827DACF4B00005559 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		11A62EC627DACF4B00005559 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11A62EC727DACF4B00005559 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		11A62ECB27DACF4B00005559 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +432,6 @@
 				INFOPLIST_FILE = "Carfax-tech-assessment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +459,6 @@
 				INFOPLIST_FILE = "Carfax-tech-assessment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
