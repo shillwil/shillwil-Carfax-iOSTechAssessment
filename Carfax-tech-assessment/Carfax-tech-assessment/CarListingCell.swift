@@ -19,40 +19,74 @@ class CarListingCell: UICollectionViewCell {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
-		var constraints: [NSLayoutConstraint] = []
-		defer { NSLayoutConstraint.activate(constraints) }
+		let stackView = UIStackView()
+		stackView.axis = .vertical
+		stackView.spacing = CarListingCellConstants.stackViewSpacing
+		stackView.translatesAutoresizingMaskIntoConstraints = false
+		addSubview(stackView)
 
-		let imageView = UIImageView()
-		constraints += [imageView.topAnchor.constraint(equalTo: self.topAnchor),
-						imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-						imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)]
+		NSLayoutConstraint.activate([stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+									 stackView.topAnchor.constraint(equalTo: topAnchor),
+									 stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+									 stackView.bottomAnchor.constraint(equalTo: bottomAnchor)])
 
 		self.imageView = imageView
+		stackView.addArrangedSubview(imageView)
+
+		let labelStackView = UIStackView()
+		labelStackView.axis = .vertical
+		labelStackView.spacing = CarListingCellConstants.stackViewSpacing
+		labelStackView.distribution = .fill
+		labelStackView.isLayoutMarginsRelativeArrangement = true
+		labelStackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: .zero,
+																		  leading: CarListingCellConstants.stackViewSpacing * 2,
+																		  bottom: CarListingCellConstants.stackViewSpacing,
+																		  trailing: CarListingCellConstants.stackViewSpacing * 2)
+		stackView.addArrangedSubview(labelStackView)
 
 		let carMakeAndYearLabel = UILabel()
-		carMakeAndYearLabel.textAlignment = .left
-		constraints += [carMakeAndYearLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
-						carMakeAndYearLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),]
-
+		carMakeAndYearLabel.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize, weight: .bold)
+		labelStackView.addArrangedSubview(carMakeAndYearLabel)
 		self.carMakeAndYearLabel = carMakeAndYearLabel
 
 		let hStack: UIStackView = UIStackView()
+		labelStackView.addArrangedSubview(hStack)
 		hStack.axis = .horizontal
+		hStack.spacing = CarListingCellConstants.stackViewSpacing / 2
 
 		let carPrice = UILabel()
+		carPrice.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize, weight: .bold)
 		self.carPrice = carPrice
-		hStack.addArrangedSubview(self.carPrice)
+		hStack.addArrangedSubview(carPrice)
+
+		hStack.addArrangedSubview(makeLabelSeparator(ofSize: CarListingCellConstants.labelFontSize))
 
 		let mileageLabel = UILabel()
+		mileageLabel.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize)
 		self.mileageLabel = mileageLabel
-		hStack.addArrangedSubview(self.mileageLabel)
+		hStack.addArrangedSubview(mileageLabel)
+
+		hStack.addArrangedSubview(makeLabelSeparator(ofSize: CarListingCellConstants.labelFontSize))
 
 		let locationLabel = UILabel()
+		locationLabel.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize)
 		self.locationLabel = locationLabel
-		hStack.addArrangedSubview(self.locationLabel)
+		hStack.addArrangedSubview(locationLabel)
+
+		let spacer = UIView()
+		hStack.addArrangedSubview(spacer)
+
+		let dealerButton = UIButton()
 	}
 
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+
+	func makeLabelSeparator(ofSize size: CGFloat) -> UILabel {
+		let labelSeparator = UILabel()
+		labelSeparator.text = " | "
+		labelSeparator.font = .systemFont(ofSize: size)
+		return labelSeparator
 	}
 }
