@@ -88,6 +88,24 @@ class ViewController: UIViewController {
 	fileprivate func getLocation(listing: Listing) -> String {
 		"\(listing.city), \(listing.state)"
 	}
+
+	fileprivate func createActionForDealerButton(listing: Listing) -> UIAction {
+		UIAction { _ in
+			let phoneNumber = listing.phone
+			if let phoneURL = NSURL(string: ("tel://" + phoneNumber)) {
+
+				let alert = UIAlertController(title: ("Call " + phoneNumber + "?"), message: nil, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
+					UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
+				}))
+
+				alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+				self.present(alert, animated: true, completion: nil)
+			}
+		}
+
+
+	}
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -116,6 +134,8 @@ extension ViewController: UICollectionViewDataSource {
 		cell.locationLabel.text = getLocation(listing: currentListing)
 
 		cell.callDealerButton.setTitle(currentListing.phone, for: .normal)
+		let action = createActionForDealerButton(listing: currentListing)
+		cell.callDealerButton.addAction(action, for: .touchUpInside)
 
 		return cell
 	}
