@@ -24,12 +24,18 @@ class CarListingCell: UICollectionViewCell {
 		stackView.spacing = CarListingCellConstants.stackViewSpacing
 		stackView.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(stackView)
+//		stackView.distribution = .fill // TODO: Review for deletion
 
 		NSLayoutConstraint.activate([stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
 									 stackView.topAnchor.constraint(equalTo: topAnchor),
 									 stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
 									 stackView.bottomAnchor.constraint(equalTo: bottomAnchor)])
 
+		let image = UIImage(systemName: "photo.artframe")
+
+		let imageView = UIImageView(image: image)
+		imageView.backgroundColor = .orange
+//		imageView.setContentCompressionResistancePriority(.required, for: .vertical) // TODO: Review for deletion
 		self.imageView = imageView
 		stackView.addArrangedSubview(imageView)
 
@@ -45,16 +51,18 @@ class CarListingCell: UICollectionViewCell {
 		stackView.addArrangedSubview(labelStackView)
 
 		let carMakeAndYearLabel = UILabel()
+		carMakeAndYearLabel.text = "2016 Kia Optima"
 		carMakeAndYearLabel.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize, weight: .bold)
 		labelStackView.addArrangedSubview(carMakeAndYearLabel)
 		self.carMakeAndYearLabel = carMakeAndYearLabel
 
-		let hStack: UIStackView = UIStackView()
+		let hStack = UIStackView()
 		labelStackView.addArrangedSubview(hStack)
 		hStack.axis = .horizontal
 		hStack.spacing = CarListingCellConstants.stackViewSpacing / 2
 
 		let carPrice = UILabel()
+		carPrice.text = "$28,560"
 		carPrice.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize, weight: .bold)
 		self.carPrice = carPrice
 		hStack.addArrangedSubview(carPrice)
@@ -62,6 +70,7 @@ class CarListingCell: UICollectionViewCell {
 		hStack.addArrangedSubview(makeLabelSeparator(ofSize: CarListingCellConstants.labelFontSize))
 
 		let mileageLabel = UILabel()
+		mileageLabel.text = "100k Mi"
 		mileageLabel.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize)
 		self.mileageLabel = mileageLabel
 		hStack.addArrangedSubview(mileageLabel)
@@ -69,6 +78,7 @@ class CarListingCell: UICollectionViewCell {
 		hStack.addArrangedSubview(makeLabelSeparator(ofSize: CarListingCellConstants.labelFontSize))
 
 		let locationLabel = UILabel()
+		locationLabel.text = "Anchorage, AK"
 		locationLabel.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize)
 		self.locationLabel = locationLabel
 		hStack.addArrangedSubview(locationLabel)
@@ -76,7 +86,13 @@ class CarListingCell: UICollectionViewCell {
 		let spacer = UIView()
 		hStack.addArrangedSubview(spacer)
 
+		// TODO: Turn into function that sets up dealerButton with the UIAction that initiates the Action sheet and ability to  initiate call or cancel call
 		let dealerButton = UIButton()
+		dealerButton.setTitle("(801) 867-5309", for: .normal)
+		dealerButton.titleLabel?.font = .systemFont(ofSize: CarListingCellConstants.labelFontSize, weight: .bold)
+		dealerButton.setTitleColor(.systemBlue, for: .normal)
+		self.callDealerButton = dealerButton
+		labelStackView.addArrangedSubview(dealerButton)
 	}
 
 	required init?(coder: NSCoder) {
