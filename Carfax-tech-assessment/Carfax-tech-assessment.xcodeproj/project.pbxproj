@@ -17,6 +17,15 @@
 		11A62EE427DACF4C00005559 /* Carfax_tech_assessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EE327DACF4C00005559 /* Carfax_tech_assessmentUITestsLaunchTests.swift */; };
 		11A62EF127DAD58200005559 /* CarListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EF027DAD58200005559 /* CarListingCell.swift */; };
 		11A62EF727DC124200005559 /* CarListingCell+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EF627DC124200005559 /* CarListingCell+Helper.swift */; };
+		11A62EF927DC208000005559 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EF827DC208000005559 /* NetworkingController.swift */; };
+		11A62EFB27DC20D900005559 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EFA27DC20D900005559 /* Listing.swift */; };
+		11A62EFD27DC614C00005559 /* ListingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A62EFC27DC614C00005559 /* ListingContainer.swift */; };
+		11F8C5FE27DF078100EF6EC9 /* HTTPMethod+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C5FD27DF078100EF6EC9 /* HTTPMethod+Errors.swift */; };
+		11F8C60027DF07F000EF6EC9 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C5FF27DF07F000EF6EC9 /* NetworkRequest.swift */; };
+		11F8C60427DF2B1500EF6EC9 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60327DF2B1500EF6EC9 /* NetworkDataLoader.swift */; };
+		11F8C60627DF2E0E00EF6EC9 /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60527DF2E0E00EF6EC9 /* MockDataLoader.swift */; };
+		11F8C60827DF34ED00EF6EC9 /* TestJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60727DF34ED00EF6EC9 /* TestJSON.swift */; };
+		11F8C60A27DF364200EF6EC9 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60927DF364200EF6EC9 /* BaseURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,15 @@
 		11A62EE327DACF4C00005559 /* Carfax_tech_assessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carfax_tech_assessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		11A62EF027DAD58200005559 /* CarListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingCell.swift; sourceTree = "<group>"; };
 		11A62EF627DC124200005559 /* CarListingCell+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarListingCell+Helper.swift"; sourceTree = "<group>"; };
+		11A62EF827DC208000005559 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
+		11A62EFA27DC20D900005559 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		11A62EFC27DC614C00005559 /* ListingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingContainer.swift; sourceTree = "<group>"; };
+		11F8C5FD27DF078100EF6EC9 /* HTTPMethod+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPMethod+Errors.swift"; sourceTree = "<group>"; };
+		11F8C5FF27DF07F000EF6EC9 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		11F8C60327DF2B1500EF6EC9 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
+		11F8C60527DF2E0E00EF6EC9 /* MockDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoader.swift; sourceTree = "<group>"; };
+		11F8C60727DF34ED00EF6EC9 /* TestJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSON.swift; sourceTree = "<group>"; };
+		11F8C60927DF364200EF6EC9 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,13 @@
 				11A62EC927DACF4B00005559 /* Assets.xcassets */,
 				11A62ECB27DACF4B00005559 /* LaunchScreen.storyboard */,
 				11A62ECE27DACF4B00005559 /* Info.plist */,
+				11A62EF827DC208000005559 /* NetworkingController.swift */,
+				11F8C5FD27DF078100EF6EC9 /* HTTPMethod+Errors.swift */,
+				11F8C5FF27DF07F000EF6EC9 /* NetworkRequest.swift */,
+				11A62EFA27DC20D900005559 /* Listing.swift */,
+				11A62EFC27DC614C00005559 /* ListingContainer.swift */,
+				11F8C60327DF2B1500EF6EC9 /* NetworkDataLoader.swift */,
+				11F8C60927DF364200EF6EC9 /* BaseURL.swift */,
 			);
 			path = "Carfax-tech-assessment";
 			sourceTree = "<group>";
@@ -117,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				11A62ED727DACF4C00005559 /* Carfax_tech_assessmentTests.swift */,
+				11F8C60527DF2E0E00EF6EC9 /* MockDataLoader.swift */,
+				11F8C60727DF34ED00EF6EC9 /* TestJSON.swift */,
 			);
 			path = "Carfax-tech-assessmentTests";
 			sourceTree = "<group>";
@@ -261,9 +288,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				11A62EC527DACF4B00005559 /* ViewController.swift in Sources */,
+				11A62EFB27DC20D900005559 /* Listing.swift in Sources */,
+				11F8C60A27DF364200EF6EC9 /* BaseURL.swift in Sources */,
+				11F8C60427DF2B1500EF6EC9 /* NetworkDataLoader.swift in Sources */,
 				11A62EC127DACF4B00005559 /* AppDelegate.swift in Sources */,
 				11A62EC327DACF4B00005559 /* SceneDelegate.swift in Sources */,
+				11F8C60027DF07F000EF6EC9 /* NetworkRequest.swift in Sources */,
+				11A62EF927DC208000005559 /* NetworkingController.swift in Sources */,
+				11F8C5FE27DF078100EF6EC9 /* HTTPMethod+Errors.swift in Sources */,
 				11A62EF127DAD58200005559 /* CarListingCell.swift in Sources */,
+				11A62EFD27DC614C00005559 /* ListingContainer.swift in Sources */,
 				11A62EF727DC124200005559 /* CarListingCell+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F8C60627DF2E0E00EF6EC9 /* MockDataLoader.swift in Sources */,
 				11A62ED827DACF4C00005559 /* Carfax_tech_assessmentTests.swift in Sources */,
+				11F8C60827DF34ED00EF6EC9 /* TestJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
