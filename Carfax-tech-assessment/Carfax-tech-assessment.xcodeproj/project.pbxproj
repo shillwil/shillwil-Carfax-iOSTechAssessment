@@ -26,6 +26,7 @@
 		11F8C60627DF2E0E00EF6EC9 /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60527DF2E0E00EF6EC9 /* MockDataLoader.swift */; };
 		11F8C60827DF34ED00EF6EC9 /* TestJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60727DF34ED00EF6EC9 /* TestJSON.swift */; };
 		11F8C60A27DF364200EF6EC9 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60927DF364200EF6EC9 /* BaseURL.swift */; };
+		11F8C61027DF4E0100EF6EC9 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8C60F27DF4E0100EF6EC9 /* UIImageView+Load.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		11F8C60527DF2E0E00EF6EC9 /* MockDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoader.swift; sourceTree = "<group>"; };
 		11F8C60727DF34ED00EF6EC9 /* TestJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJSON.swift; sourceTree = "<group>"; };
 		11F8C60927DF364200EF6EC9 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		11F8C60F27DF4E0100EF6EC9 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,18 +124,12 @@
 				11A62EC027DACF4B00005559 /* AppDelegate.swift */,
 				11A62EC227DACF4B00005559 /* SceneDelegate.swift */,
 				11A62EC427DACF4B00005559 /* ViewController.swift */,
-				11A62EF027DAD58200005559 /* CarListingCell.swift */,
-				11A62EF627DC124200005559 /* CarListingCell+Helper.swift */,
+				11F8C60E27DF42E700EF6EC9 /* Views */,
 				11A62EC927DACF4B00005559 /* Assets.xcassets */,
 				11A62ECB27DACF4B00005559 /* LaunchScreen.storyboard */,
 				11A62ECE27DACF4B00005559 /* Info.plist */,
-				11A62EF827DC208000005559 /* NetworkingController.swift */,
-				11F8C5FD27DF078100EF6EC9 /* HTTPMethod+Errors.swift */,
-				11F8C5FF27DF07F000EF6EC9 /* NetworkRequest.swift */,
-				11A62EFA27DC20D900005559 /* Listing.swift */,
-				11A62EFC27DC614C00005559 /* ListingContainer.swift */,
-				11F8C60327DF2B1500EF6EC9 /* NetworkDataLoader.swift */,
-				11F8C60927DF364200EF6EC9 /* BaseURL.swift */,
+				11F8C60B27DF427F00EF6EC9 /* Networking */,
+				11F8C60F27DF4E0100EF6EC9 /* UIImageView+Load.swift */,
 			);
 			path = "Carfax-tech-assessment";
 			sourceTree = "<group>";
@@ -155,6 +151,45 @@
 				11A62EE327DACF4C00005559 /* Carfax_tech_assessmentUITestsLaunchTests.swift */,
 			);
 			path = "Carfax-tech-assessmentUITests";
+			sourceTree = "<group>";
+		};
+		11F8C60B27DF427F00EF6EC9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				11A62EF827DC208000005559 /* NetworkingController.swift */,
+				11F8C60D27DF42BE00EF6EC9 /* Helpers */,
+				11F8C60C27DF429B00EF6EC9 /* Models */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		11F8C60C27DF429B00EF6EC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11A62EFC27DC614C00005559 /* ListingContainer.swift */,
+				11F8C5FF27DF07F000EF6EC9 /* NetworkRequest.swift */,
+				11A62EFA27DC20D900005559 /* Listing.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11F8C60D27DF42BE00EF6EC9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				11F8C5FD27DF078100EF6EC9 /* HTTPMethod+Errors.swift */,
+				11F8C60327DF2B1500EF6EC9 /* NetworkDataLoader.swift */,
+				11F8C60927DF364200EF6EC9 /* BaseURL.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		11F8C60E27DF42E700EF6EC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11A62EF027DAD58200005559 /* CarListingCell.swift */,
+				11A62EF627DC124200005559 /* CarListingCell+Helper.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +324,7 @@
 			files = (
 				11A62EC527DACF4B00005559 /* ViewController.swift in Sources */,
 				11A62EFB27DC20D900005559 /* Listing.swift in Sources */,
+				11F8C61027DF4E0100EF6EC9 /* UIImageView+Load.swift in Sources */,
 				11F8C60A27DF364200EF6EC9 /* BaseURL.swift in Sources */,
 				11F8C60427DF2B1500EF6EC9 /* NetworkDataLoader.swift in Sources */,
 				11A62EC127DACF4B00005559 /* AppDelegate.swift in Sources */,

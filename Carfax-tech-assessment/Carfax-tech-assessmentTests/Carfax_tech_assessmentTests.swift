@@ -23,6 +23,7 @@ class Carfax_tech_assessmentTests: XCTestCase {
 
 			let firstListing = container.listings.first
 			XCTAssertEqual(firstListing?.phone, "8334039932")
+			XCTAssertEqual(firstListing?.year, 2017)
 		}
 	}
 }

@@ -16,6 +16,7 @@ struct Listing: Codable, Equatable {
 	let make: String
 	let mileage: Int
 	let model: String
+	let year: Int
 
 	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -33,6 +34,7 @@ struct Listing: Codable, Equatable {
 		make = try container.decode(String.self, forKey: .make)
 		mileage = try container.decode(Int.self, forKey: .mileage)
 		model = try container.decode(String.self, forKey: .model)
+		year = try container.decode(Int.self, forKey: .year)
 
 
 		enum CodingKeys: String, CodingKey {
